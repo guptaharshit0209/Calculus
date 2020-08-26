@@ -132,13 +132,6 @@
 /*     */     
 /* 133 */     XSSFRow xSSFRow5 = s.createRow(8);
 /*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */     
 /* 142 */     Cell cell80 = xSSFRow5.createCell(0);
 /* 143 */     cell80.setCellValue("Receipt Date");
 /* 144 */     cell80.setCellStyle((CellStyle)style4);
@@ -275,27 +268,6 @@
 /* 275 */         this.DNTotal += cds.getCDAmount();
 /*     */       } 
 /*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */       
 /* 299 */       i++;
 /*     */     } 
 /* 301 */     i += 4;
@@ -412,20 +384,6 @@
 /* 412 */     Cell FinalMerged = xSSFRow11.createCell(0);
 /* 413 */     FinalMerged.setCellStyle((CellStyle)style5);
 /*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */     
 /*     */     try {
 /* 430 */       String outputFileLocation = "E:\\CreditNotes\\";
 /* 431 */       String outputFileName = ExcelExtraction.ledgerName;

@@ -24,7 +24,7 @@
 /* 24 */       disP = 0.0D;
 /*    */     } 
 /*    */     
-/* 27 */     if (s.equals("Seeds Sales") || s.equals("Opening Balance") || p.equals("Cash Discount") || p.equals("Late Payment Charges")) {
+/* 27 */     if (s.equals("Seeds Sales") || s.equals("Opening Balance") || p.equals("Cash Discount") || s.equals("Late Payment Charges") ||  s.equals("Sale Gst - Net")) {
 /*    */       
 /* 29 */       disP = 0.0D;
 /* 30 */       return disP;
@@ -36,34 +36,6 @@
 /* 36 */       disP = (daysCount - 90L) * -6.7E-4D;
 /*    */ 
 /*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */       
 /* 67 */       return disP;
 /*    */     } 
 /*    */ 

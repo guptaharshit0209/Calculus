@@ -70,14 +70,6 @@
 /*  70 */       Cell lastRowThirdCell = xSSFRow2.getCell(2);
 /*  71 */       String lastRowParticular = lastRowThirdCell.getStringCellValue();
 /*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */       
 /*  81 */       if (lastRowParticular.equals(closeBal)) {
 /*  82 */         lastVoucherIndexAdjuster = 3;
 /*     */       } else {
@@ -86,15 +78,7 @@
 /*     */ 
 /*     */       
 /*  88 */       ArrayList<NewVoucher> voucherList = new ArrayList<>();
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */       
-/*  97 */       NewVoucher eob = new NewVoucher();
+/*     */       NewVoucher eob = new NewVoucher();
 /*     */       
 /*  99 */       XSSFRow xSSFRow3 = sheet.getRow(11);
 /* 100 */       Cell firstRowThirdCell = xSSFRow3.getCell(2);
@@ -151,19 +135,24 @@
 /* 151 */             String result = formater.format(mydate);
 /* 152 */             System.out.println(result);
 /* 153 */             e.setDate(result);
-/*     */           }
+/*     */           System.out.println(result);
+					}
 /* 155 */           else if (j == 2) {
 /* 156 */             e.setParticulars(ce.getStringCellValue());
-/*     */           }
+/*     */           System.out.println(ce.getStringCellValue());
+					}
 /* 158 */           else if (j == 3) {
 /* 159 */             e.setVoucher(ce.getStringCellValue());
-/*     */           }
+/*     */           System.out.println(ce.getStringCellValue());
+
+					}
 /* 161 */           else if (j == 4) {
-/* 162 */             e.setVoucherNo(ce.getStringCellValue());
+/* 162 */             e.setVoucherNo(ce.getStringCellValue()); System.out.println(ce.getStringCellValue());
+
 /*     */           }
 /* 164 */           else if (j == 5) {
 /*     */             
-/* 166 */             e.setDebit(Double.valueOf(ce.getNumericCellValue()));
+/* 166 */             e.setDebit(Double.valueOf(ce.getNumericCellValue())); 
 /*     */           }
 /* 168 */           else if (j == 6) {
 /*     */             
@@ -186,22 +175,21 @@
 /* 186 */         String vname = emp.getVoucher();
 /* 187 */         String pname = emp.getParticulars();
 /*     */         
-/* 189 */         if (vname.equals(rep) || vname.equals(salRe) || pname.equals("Cash Discount")) {
+/* 189 */         if (vname.equals(rep) || vname.equals(salRe) || pname.equals("Cash Discount") || pname.equals("Rate Difference - GST")  ) {
 /*     */           
 /* 191 */           p++;
 /* 192 */           Payments.add(emp);
+
 /* 193 */           if (pname.equals("Cash Discount"))
 /*     */           {
 /* 195 */             CDsooFar += emp.getCredit().doubleValue();
 /*     */           }
 /*     */ 
-/*     */           
 /*     */           continue;
 /*     */         } 
 /*     */         
-/* 202 */         if (vname.equals(sg) || vname.equals(openBal) || pname.equals("Late Payment Charges")) {
+/* 202 */         if (vname.equals(sg) || vname.equals(openBal) || pname.equals("Late Payment Charges") || pname.equals("Bank Exp.")) {
 /*     */ 
-/*     */           
 /* 205 */           s++;
 /* 206 */           Sales.add(emp);
 /* 207 */           if (pname.equals("Late Payment Charges"))
@@ -212,10 +200,6 @@
 /*     */       } 
 /*     */ 
 /*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */       
 /* 219 */       NewVoucher payment = Payments.remove();
 /* 220 */       NewVoucher sales = Sales.remove();
 /*     */       
@@ -225,8 +209,6 @@
 /* 225 */       String sParticular = sales.getParticulars();
 /* 226 */       String pParticular = payment.getParticulars();
 /*     */ 
-/*     */ 
-/*     */       
 /* 230 */       System.out.println();
 /*     */       
 /* 232 */       String pDate = payment.getDate();
@@ -284,9 +266,7 @@
 /* 284 */           cashD.setCDApplicableAmount(creditNoteAmount);
 /* 285 */           creditNoteList.add(cashD);
 /*     */ 
-/*     */ 
-/*     */           
-/* 289 */           salAmount = 0.0D;
+/*     */ 			salAmount = 0.0D;
 /* 290 */           payAmount -= creditNoteAmount;
 /*     */ 
 /*     */           
@@ -307,13 +287,6 @@
 /*     */           
 /* 308 */           CashDiscount cashD = new CashDiscount();
 /*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */           
 /* 317 */           double creditNoteAmount = payAmount;
 /*     */           
 /* 319 */           System.out.println("////////// Applicable amount for discount //////////// " + creditNoteAmount);
@@ -370,15 +343,7 @@
 /* 370 */         if (payAmount == salAmount) {
 /*     */           
 /* 372 */           CashDiscount cashD = new CashDiscount();
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */ 
-/*     */           
-/* 381 */           double creditNoteAmount = payAmount;
+/*     */ 			double creditNoteAmount = payAmount;
 /* 382 */           System.out.println("////////// Applicable amount for discount //////////// " + creditNoteAmount);
 /*     */ 
 /*     */           
