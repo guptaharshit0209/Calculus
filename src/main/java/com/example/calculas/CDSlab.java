@@ -24,7 +24,7 @@
 /* 24 */       disP = 0.0D;
 /*    */     } 
 /*    */     
-/* 27 */     if (s.equals("Seeds Sales") || s.equals("Opening Balance") || p.equals("Cash Discount") || s.equals("Late Payment Charges") ||  s.equals("Sale Gst - Net")) {
+/* 27 */     if (s.equals("Seeds Sales") || s.equals("Opening Balance") || p.equals("Cash Discount") || s.equals("Late Payment Charges") || s.equals("Sale Gst - Net") || p.equals("Rate Difference - GST") || p.equals("Sale Return Gst")) {
 /*    */       
 /* 29 */       disP = 0.0D;
 /* 30 */       return disP;

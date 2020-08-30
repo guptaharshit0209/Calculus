@@ -175,7 +175,7 @@
 /* 186 */         String vname = emp.getVoucher();
 /* 187 */         String pname = emp.getParticulars();
 /*     */         
-/* 189 */         if (vname.equals(rep) || vname.equals(salRe) || pname.equals("Cash Discount") || pname.equals("Rate Difference - GST")  ) {
+/* 189 */         if (vname.equals("Journal")||vname.equals(rep) || vname.equals(salRe) || pname.equals("Cash Discount") || pname.equals("Rate Difference - GST")  ) {
 /*     */           
 /* 191 */           p++;
 /* 192 */           Payments.add(emp);
