@@ -232,8 +232,6 @@
 /* 250 */           System.out.println("***************Days between: " + daysCount);
 /*     */ 
 /*     */ 
-/*     */ 
-/*     */           
 /* 255 */           disPercent = CDSlab.getDiscountPercent(daysCount, sParticular, pParticular);
 /* 256 */           System.out.println("***************CD Percentage between: " + disPercent);
 /*     */           
